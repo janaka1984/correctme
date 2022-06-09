@@ -1,18 +1,10 @@
 pipeline {
   agent {label 'master'}
-
 stages {
-
-stage('build') {
+stage('git-checkout') {
   steps {
-         echo "building----"
-             }
-            }
-
-stage('test') {
-  steps {
-         echo "testing-----"
-             }
-                     }
+git 'https://github.com/janaka1984/correctme.git'
+}
+}
 }
 }
